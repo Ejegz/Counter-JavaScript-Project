@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter JS</title>
+
+    <style media="screen">
+        .box{
+        width: 300px;
+        height: 300px;
+        background-image: url('background.jpg');
+        color: fff;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+      }
+
+      h1{
+        color: white;
+      }
+
+      #counter{
+        font-size: 70px;
+        color: green;
+      }
+
+      #decrement{
+        background-color: #2875bf;
+        padding: 15px 32px;
+        border-radius: 8px;
+      }
+
+      #increment{
+        background-color: #2875bf;
+        padding: 15px 32px;
+        border-radius: 8px;
+      }
+
+      #reset{
+        background-color: #2875bf;
+        padding: 15px 32px;
+        border-radius: 8px;;
+      }
+
+      h1{
+        color: white;
+        vertical-align: center;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+    <main>
+  <center>
+    <div class="box">
+      <h1>COUNTER</h1>
+      <div id="counter">
+        7
+      </div>
+
+    <div class="buttons">
+      <button id="decrement">Lower Count</button><br>
+      <button id="increment">Add Count</button><br>
+      <button id="reset">Reset Count</button><br>
+    </div>
+   </div>
+  </center>
+
+
+</main>
+
+    <script>
+      const counter = document.getElementById("counter");
+      const incrementBtn = document.getElementById("increment");
+      const decrementBtn = document.getElementById("decrement");
+      const resetBtn = document.getElementById("reset");
+
+      let counterValue = 7;
+
+      incrementBtn.addEventListener("click", function (event) {
+        counterValue += 1;
+        counter.innerHTML = counterValue;
+      });
+      decrementBtn.addEventListener("click", function (event) {
+        counterValue -= 1;
+        counter.innerHTML = counterValue;
+      });
+      resetBtn.addEventListener("click", function (event) {
+        counterValue = 0;
+        counter.innerHTML = counterValue;
+      });
+    </script>
+  </body>
+</html>
